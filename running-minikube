@@ -1,35 +1,35 @@
-Install docker
+* Install docker 🐋
 
-Install kubectl
+* create docker image, add tag, push to hub 🖼️
 
-Install minikube
+* Install kubectl 🧰
 
-create docker image, add tag, push to hub
+* Install & start minikube 🖥️
 
-start minikube
+* Create deployment
 
-create deployment
+* Expose Service
 
 
-KUBECTX
+####  KUBECTX
 
 kubectx     # see which context your in
 kubectx <name-of-context>   # change to a certain context
 
 
-KUBENS
+#### KUBENS
 
 kubens    # see which namespace your in
 
 
-KUBECTL
+#### KUBECTL
 Create deployment: 
 kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
 
 kubectl get deployments
 kubectl get pods
 
-Create service:
+#### Create service:
 kubectl expose deployment hello-node --type=LoadBalancer --port=8080
 
 "The --type=LoadBalancer flag indicates that you want to expose your Service outside of the cluster."
@@ -37,10 +37,10 @@ kubectl expose deployment hello-node --type=LoadBalancer --port=8080
 kubectl get services
 kubect cluster-info
 
-Run service:
+#### Run service:
 minikube service hello-node
 
-MINIKUBE
+## MINIKUBE
 minikube start
 kubectl cluster-info
 kubectl get nodes
@@ -57,6 +57,7 @@ minikube get-k8s-versions
 minikube start --kubernetes-version v1.7.0
 
 
+## KUBECTL 
 kubectl get pod,svc -n kube-system
 
 kubectl create deployment webserver-minikube --image=sleepypioneer/webserver-in-go
@@ -101,7 +102,7 @@ curl $(minikube ip):$NODE_PORT
 
 And we get a response from the server. The Service is exposed.
 
-DOCKER
+## 🐋 DOCKER
 docker container ls
 docker exec -it <container> bash
 docker stop <container>
@@ -124,7 +125,7 @@ docker push <docker-hub-repo-name>
 https://hub.docker.com
 
 
-RESOURCE:
+## 📚 RESOURCES:
 https://www.linuxnix.com/how-to-push-docker-images-to-docker-hub-repository/
 
 can link to repo so when changes are made in github repo it auto builds it
