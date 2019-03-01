@@ -1,3 +1,5 @@
+# Running services in Kubernetes Cluster locally with Minikube
+
 * Install docker 🐋
 
 * create docker image, add tag, push to hub 🖼️
