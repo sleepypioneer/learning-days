@@ -12,6 +12,10 @@
 
 * Expose Service
 
+* Add prometheus & run locally
+
+* Run prometheus & run in Minikube
+
 
 ####  KUBECTX
 
@@ -122,9 +126,15 @@ docker tag <image-name> <docker-hub-repo-name>
 
 docker push <docker-hub-repo-name> 
 
-# ie docker push sleepypioneer/webserver_in_go
+ie docker push sleepypioneer/webserver_in_go
 
 https://hub.docker.com
+
+## Prometheus
+
+#### Run Prometheus locally
+
+https://prometheus.io/docs/introduction/first_steps/
 
 
 ## 📚 RESOURCES:
