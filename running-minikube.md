@@ -29,6 +29,7 @@ kubens    # see which namespace your in
 
 
 #### KUBECTL
+https://kubernetes.io/docs/tasks/tools/install-kubectl/
 Create deployment: 
 kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
 
