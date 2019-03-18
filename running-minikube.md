@@ -110,26 +110,27 @@ curl $(minikube ip):$NODE_PORT
 And we get a response from the server. The Service is exposed.
 
 ## 🐋 DOCKER
-docker container ls
-docker exec -it <container> bash
-docker stop <container>
-docker rm <container>
-docker ps
+docker container ls  
+docker exec -it <container> bash  
+docker stop <container>  
+docker rm <container>  
+docker ps  
+ 
+docker run -P <container-name>  
 
-docker run -P <container-name>
+docker run -p 8000:8000 <container-name>  
 
+docker login   #loginto docker hub account  
+ 
+docker images  
 
-docker login   #loginto docker hub account
+docker tag <image-name> <docker-hub-repo-name>  
 
-docker images
+docker push <docker-hub-repo-name>  
 
-docker tag <image-name> <docker-hub-repo-name> 
+ie docker push sleepypioneer/webserver_in_go  
 
-docker push <docker-hub-repo-name> 
-
-ie docker push sleepypioneer/webserver_in_go
-
-https://hub.docker.com
+https://hub.docker.com  
 
 ## Prometheus
 
