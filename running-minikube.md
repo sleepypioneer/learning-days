@@ -30,7 +30,9 @@ kubens    # see which namespace your in
 
 #### KUBECTL
 https://kubernetes.io/docs/tasks/tools/install-kubectl/
-Create deployment: 
+
+
+#### Create deployment:
 kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
 
 kubectl get deployments
@@ -42,7 +44,7 @@ kubectl expose deployment hello-node --type=LoadBalancer --port=8080
 "The --type=LoadBalancer flag indicates that you want to expose your Service outside of the cluster."
 
 kubectl get services
-kubect cluster-info
+kubectl cluster-info
 
 #### Run service:
 minikube service hello-node
