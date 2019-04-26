@@ -4,8 +4,10 @@ https://github.com/prometheus/client_python
 
 * Set to `/metrics` endpoint
 
-`elif endpoint == '/metrics':`  
-`return super(HTTPRequestHandler, self).do_GET()`
+```
+elif endpoint == '/metrics':  
+  return super(HTTPRequestHandler, self).do_GET()
+```
 
 
 
@@ -16,10 +18,12 @@ https://github.com/prometheus/client_python
 #### Counter
 Counters go up, and reset when the process restarts.
 
-```from prometheus_client import Counter
+```
+from prometheus_client import Counter
 c = Counter('my_failures', 'Description of counter')
 c.inc()     # Increment by 1
-c.inc(1.6)  # Increment by given value```
+c.inc(1.6)  # Increment by given value
+```
 
 https://github.com/prometheus/client_python#counter
 
@@ -28,10 +32,12 @@ https://github.com/prometheus/client_python#counter
 
 ... Labels can also be passed as keyword-arguments:
 
-```from prometheus_client import Counter
+```
+from prometheus_client import Counter
 c = Counter('my_requests_total', 'HTTP Failures', ['method', 'endpoint'])
 c.labels(method='get', endpoint='/').inc()
-c.labels(method='post', endpoint='/submit').inc()```
+c.labels(method='post', endpoint='/submit').inc()
+```
 
 https://github.com/prometheus/client_python#labels
 
